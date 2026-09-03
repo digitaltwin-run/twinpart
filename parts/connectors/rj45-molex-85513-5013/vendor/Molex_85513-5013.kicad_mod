@@ -1,0 +1,55 @@
+(module Molex_85513-5013 (version 20240108) (generator pcbnew)
+  (layer F.Cu)
+  (tedit 6797E3C0)
+  (descr "Molex 85513-5013, 8P8C RJ45, top entry, unshielded, SMT, pitch 1.27mm")
+  (tags "RJ45 Ethernet connector Molex 85513 SMT top-entry unshielded")
+  (attr smd)
+  (fp_text reference REF** (at 7.62 -6) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value Molex_85513-5013 (at 7.62 6) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  ; Fab outline (approx outer shape, view from top)
+  (fp_line (start -1.0 -5.25) (end 16.24 -5.25) (layer F.Fab) (width 0.1))
+  (fp_line (start 16.24 -5.25) (end 16.24 5.25) (layer F.Fab) (width 0.1))
+  (fp_line (start 16.24 5.25) (end -1.0 5.25) (layer F.Fab) (width 0.1))
+  (fp_line (start -1.0 5.25) (end -1.0 -5.25) (layer F.Fab) (width 0.1))
+
+  ; Reference edge / pin 1 marker
+  (fp_line (start 0.0 -4.0) (end 0.0 4.0) (layer F.Fab) (width 0.1))
+  (fp_circle (center 0.0 0.0) (end 0.6 0.0) (layer F.SilkS) (width 0.12))
+
+  ; Silkscreen outline (keep-out / outer shape hint)
+  (fp_line (start -1.2 -5.45) (end 16.44 -5.45) (layer F.SilkS) (width 0.12))
+  (fp_line (start 16.44 -5.45) (end 16.44 5.45) (layer F.SilkS) (width 0.12))
+  (fp_line (start 16.44 5.45) (end -1.2 5.45) (layer F.SilkS) (width 0.12))
+  (fp_line (start -1.2 5.45) (end -1.2 -5.45) (layer F.SilkS) (width 0.12))
+
+  ; Keep-out zone (approx, z rysunku: ~20.8 x 10.0 mm)
+  (fp_rect (start -2.0 -5.0) (end 17.24 5.0) (layer F.CrtYd) (width 0.05) (fill none))
+
+  ; Pads 1..8, pitch 1.27 mm, centrowane wzdłuż osi X
+  ; Wymiary padu: ok. 0.76 x 3.10 mm (typ. z rysunku)
+  (pad 1 smd rect (at 0.0 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 1.27 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 3 smd rect (at 2.54 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 4 smd rect (at 3.81 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 5 smd rect (at 5.08 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 6 smd rect (at 6.35 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 7 smd rect (at 7.62 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+  (pad 8 smd rect (at 8.89 0.0) (size 0.76 3.10) (layers F.Cu F.Paste F.Mask))
+
+  ; Dodatkowe pady montażowe / mechaniczne (jeśli są w Twojej wersji)
+  ; W 85513-5013 brak otworowanych nóżek – tylko SMT piny 1–8.
+  ; Ewentualne duże pady pod masę/uchwyty można dodać ręcznie w PCB.
+
+  ; Teksty pomocnicze
+  (fp_text user "Pin 1" (at 0.0 -3.5) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.12)))
+  )
+  (fp_text user "RJ45 8P8C" (at 7.62 3.5) (layer F.Fab)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+)

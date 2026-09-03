@@ -1,0 +1,10 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"90-06062020-070339";"";
+"REFERENCE";"855135013";"";
+"TraceParts.PartTitle";"Modular Jack 8/8|RJ45";"";
+"TraceParts.InstanceId";"90-06062020-0703392N3XX9WWY2MK673V115V3T3RA";"";
+"SUPPLIER";"Molex";"";
+"DESIGN";"Modular Jack, Vertical, Top Entry, Surface Mount, 8/8, Low Profile, 13"" Reel";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.4";"";

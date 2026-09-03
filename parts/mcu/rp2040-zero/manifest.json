@@ -1,0 +1,226 @@
+{
+  "schema_id": "wellmanifest.pcb/component-manifest/v1",
+  "component_id": "rp2040-zero",
+  "version": "1.0.0",
+  "status": "quarantined",
+  "kind": "module",
+  "source": {
+    "source_id": "panel9-local",
+    "path": "artifacts/pcb/local.pretty/RP2040-Zero.kicad_mod"
+  },
+  "electrical": {
+    "symbol": "local:RP2040-Zero",
+    "voltage_domains": [
+      "VBUS_5V",
+      "V3V3"
+    ],
+    "interfaces": [
+      "gpio",
+      "i2c",
+      "spi",
+      "uart",
+      "usb"
+    ],
+    "pin_map": [
+      {
+        "symbol_pin": "5V",
+        "type": "power_in",
+        "pads": [
+          "5V"
+        ]
+      },
+      {
+        "symbol_pin": "GND",
+        "type": "power",
+        "pads": [
+          "GND"
+        ]
+      },
+      {
+        "symbol_pin": "3V3",
+        "type": "power_out",
+        "pads": [
+          "3V3"
+        ]
+      },
+      {
+        "symbol_pin": "GP29",
+        "type": "bidirectional",
+        "pads": [
+          "GP29"
+        ]
+      },
+      {
+        "symbol_pin": "GP28",
+        "type": "bidirectional",
+        "pads": [
+          "GP28"
+        ]
+      },
+      {
+        "symbol_pin": "GP27",
+        "type": "bidirectional",
+        "pads": [
+          "GP27"
+        ]
+      },
+      {
+        "symbol_pin": "GP26",
+        "type": "bidirectional",
+        "pads": [
+          "GP26"
+        ]
+      },
+      {
+        "symbol_pin": "GP15",
+        "type": "bidirectional",
+        "pads": [
+          "GP15"
+        ]
+      },
+      {
+        "symbol_pin": "GP14",
+        "type": "bidirectional",
+        "pads": [
+          "GP14"
+        ]
+      },
+      {
+        "symbol_pin": "GP0",
+        "type": "bidirectional",
+        "pads": [
+          "GP0"
+        ]
+      },
+      {
+        "symbol_pin": "GP1",
+        "type": "bidirectional",
+        "pads": [
+          "GP1"
+        ]
+      },
+      {
+        "symbol_pin": "GP2",
+        "type": "bidirectional",
+        "pads": [
+          "GP2"
+        ]
+      },
+      {
+        "symbol_pin": "GP3",
+        "type": "bidirectional",
+        "pads": [
+          "GP3"
+        ]
+      },
+      {
+        "symbol_pin": "GP4",
+        "type": "bidirectional",
+        "pads": [
+          "GP4"
+        ]
+      },
+      {
+        "symbol_pin": "GP5",
+        "type": "bidirectional",
+        "pads": [
+          "GP5"
+        ]
+      },
+      {
+        "symbol_pin": "GP6",
+        "type": "bidirectional",
+        "pads": [
+          "GP6"
+        ]
+      },
+      {
+        "symbol_pin": "GP7",
+        "type": "bidirectional",
+        "pads": [
+          "GP7"
+        ]
+      },
+      {
+        "symbol_pin": "GP8",
+        "type": "bidirectional",
+        "pads": [
+          "GP8"
+        ]
+      },
+      {
+        "symbol_pin": "GP13",
+        "type": "bidirectional",
+        "pads": [
+          "GP13"
+        ]
+      },
+      {
+        "symbol_pin": "GP12",
+        "type": "bidirectional",
+        "pads": [
+          "GP12"
+        ]
+      },
+      {
+        "symbol_pin": "GP11",
+        "type": "bidirectional",
+        "pads": [
+          "GP11"
+        ]
+      },
+      {
+        "symbol_pin": "GP10",
+        "type": "bidirectional",
+        "pads": [
+          "GP10"
+        ]
+      },
+      {
+        "symbol_pin": "GP9",
+        "type": "bidirectional",
+        "pads": [
+          "GP9"
+        ]
+      }
+    ]
+  },
+  "eda": {
+    "footprint": "local:RP2040-Zero",
+    "footprint_revision": 1,
+    "pin_map_hash": "sha256:d7eb9054effd00dd8169a55c8b62090a5f7dcc4b3b20cecd6b26dd87a1bf522d",
+    "assets": {
+      "footprint": {
+        "path": "local.pretty/RP2040-Zero.kicad_mod",
+        "sha256": "sha256:fa31c5f781652e224b97eb335ba3b1993ed67c91d9ae7f8386c149ac6db009f5"
+      }
+    }
+  },
+  "mechanical": {
+    "length_mm": 23.5,
+    "width_mm": 18.0,
+    "height_mm": 4.0,
+    "assembly_side": "bottom",
+    "board_edge_clearance_mm": 2.54,
+    "keepout_top_mm": 1.0,
+    "keepout_bottom_mm": 1.0,
+    "mating_direction": "side",
+    "cable_exit_direction": "side",
+    "service_access": [
+      "usb_connector",
+      "bootsel_button"
+    ]
+  },
+  "models": [],
+  "verification": {
+    "datasheet_reviewed": false,
+    "symbol_pinmap_verified": false,
+    "footprint_verified": false,
+    "mechanical_envelope_verified": false,
+    "step_model_required": true,
+    "step_model_verified": false,
+    "reviewed_by": "",
+    "reviewed_at": null,
+    "notes": "Nazwa modułu nie identyfikuje producenta ani rewizji. Piny boczne GP9–GP13 nadal istnieją w obudowie, choć bieżący program ich nie używa."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schema_id": "wellmanifest.pcb/component-manifest/v1",
+  "component_id": "rj45-molex-85513-5013",
+  "version": "1.0.0",
+  "status": "provisional",
+  "kind": "connector",
+  "source": {
+    "source_id": "traceparts-molex-0855135013",
+    "path": "artifacts/pcb/local.pretty/RJ45_Molex_85513-5013.kicad_mod",
+    "manufacturer": "Molex",
+    "mpn": "85513-5013",
+    "datasheet_url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/855/85513/855135002_sd.pdf"
+  },
+  "electrical": {
+    "symbol": "local:RJ45_Molex_85513-5013",
+    "pin_map": [
+      {
+        "symbol_pin": "1",
+        "type": "passive",
+        "pads": [
+          "1"
+        ]
+      },
+      {
+        "symbol_pin": "2",
+        "type": "passive",
+        "pads": [
+          "2"
+        ]
+      },
+      {
+        "symbol_pin": "3",
+        "type": "passive",
+        "pads": [
+          "3"
+        ]
+      },
+      {
+        "symbol_pin": "4",
+        "type": "passive",
+        "pads": [
+          "4"
+        ]
+      },
+      {
+        "symbol_pin": "5",
+        "type": "passive",
+        "pads": [
+          "5"
+        ]
+      },
+      {
+        "symbol_pin": "6",
+        "type": "passive",
+        "pads": [
+          "6"
+        ]
+      },
+      {
+        "symbol_pin": "7",
+        "type": "passive",
+        "pads": [
+          "7"
+        ]
+      },
+      {
+        "symbol_pin": "8",
+        "type": "passive",
+        "pads": [
+          "8"
+        ]
+      },
+      {
+        "symbol_pin": "9",
+        "type": "passive",
+        "pads": [
+          "9"
+        ]
+      }
+    ]
+  },
+  "eda": {
+    "footprint": "local:RJ45_Molex_85513-5013",
+    "footprint_revision": 1,
+    "pin_map_hash": "sha256:7b99307a7b1a96f545e88d96694192a217030547a32fc2411ed2fccc977028f2",
+    "assets": {
+      "symbol": {
+        "path": "local.symbols/RJ45_Molex_85513-5013.kicad_sym",
+        "sha256": "sha256:3b2ddefd76734f7ae49d6b362d306c9115d64ed4c28771da1b20471d59ab3102"
+      },
+      "footprint": {
+        "path": "local.pretty/RJ45_Molex_85513-5013.kicad_mod",
+        "sha256": "sha256:e7a0d1cf0a1cee5bf03e21f9707b0b3c68595f7b21163a86b5946bf0fe33cc8b"
+      }
+    }
+  },
+  "mechanical": {
+    "length_mm": 20.8,
+    "width_mm": 15.24,
+    "height_mm": 12.85,
+    "assembly_side": "bottom",
+    "board_edge_clearance_mm": 2.54,
+    "keepout_top_mm": 0.5,
+    "keepout_bottom_mm": 0.5,
+    "mating_direction": "bottom",
+    "cable_exit_direction": "bottom",
+    "service_access": [
+      "mating_connector",
+      "cable_bend"
+    ]
+  },
+  "models": [
+    {
+      "format": "step",
+      "path": "local.3dshapes/RJ45_Molex_85513-5013.step",
+      "sha256": "sha256:4e8fe642932feaba380b9604846faa785efbf8368d4bf5dc9dc4cf6c9a4842cb",
+      "required": true,
+      "binding": "${KIPRJMOD}/local.3dshapes/RJ45_Molex_85513-5013.step"
+    }
+  ],
+  "verification": {
+    "datasheet_reviewed": false,
+    "symbol_pinmap_verified": true,
+    "footprint_verified": true,
+    "mechanical_envelope_verified": true,
+    "step_model_required": true,
+    "step_model_verified": false,
+    "reviewed_by": "",
+    "reviewed_at": null,
+    "notes": "Geometria wyprowadzen i obwiednia sa zmierzone w modelu STEP producenta, nie przepisane z opisu: 8 stopek 0.70 mm w rastrze 1.270 mm, dlugosc stopki 5.00 mm, plaszczyzna lutowania jednoznaczna, najnizszy punkt modelu lezy w plaszczyznie PCB, wiec czesc nie wymaga zadnego otworu. Land 5.60 x 0.90 mm to stopka powiekszona o 0.30 mm na palec i piete oraz 0.10 mm na bok. Mapa pinow jest jeden do jednego, pin n na pad n - tu nie ma czego pomylic. Operator wskazal, ze pin 1 jest po prawej stronie; to rozstrzyga kierunek numeracji, ale nie rozstrzyga jeszcze, w ktorym widoku - a od tego zalezy, ktory koniec rzedu padow dostaje numer 1. Ten jeden parametr trzeba dorysowac przed kandydatem PCB, bo odbicie zamienia miejscami ENC_A, ENC_B i ENC_SW. Kandydat schematu go nie dotyka: zmienia wylacznie metadane symbolu. Do statusu qualified brakuje poza tym porownania landu z zalecanym layoutem producenta (SD-85513-010) oraz ogledzin transformacji modelu 3D w KiCadzie (zalozono obrot +90 stopni wokol X i przesuniecie z o 6.5 mm)."
+  }
+}

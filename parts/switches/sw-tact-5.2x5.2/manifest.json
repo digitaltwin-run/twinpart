@@ -1,0 +1,66 @@
+{
+  "schema_id": "wellmanifest.pcb/component-manifest/v1",
+  "component_id": "sw-tact-5.2x5.2",
+  "version": "2.0.0",
+  "status": "provisional",
+  "kind": "switch",
+  "source": {
+    "source_id": "panel9-local",
+    "path": "artifacts/pcb/local.pretty/SW_TACT_5.2x5.2.kicad_mod"
+  },
+  "electrical": {
+    "symbol": "local:SW_TACT",
+    "pin_map": [
+      {
+        "symbol_pin": "1",
+        "name": "A",
+        "type": "passive",
+        "pads": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "symbol_pin": "2",
+        "name": "B",
+        "type": "passive",
+        "pads": [
+          "2",
+          "4"
+        ]
+      }
+    ]
+  },
+  "eda": {
+    "footprint": "local:SW_TACT_5.2x5.2",
+    "footprint_revision": 2,
+    "pin_map_hash": "sha256:ddc4b5fd197a4ca8ebe9d75328cfbc822c72ed18567718001b6705d7b6307679",
+    "assets": {
+      "footprint": {
+        "path": "local.pretty/SW_TACT_5.2x5.2.kicad_mod",
+        "sha256": "sha256:208074f79a85c01d1f34fdf27edc9fdd4e5402c28f7b14c10402a7c7ae745633"
+      }
+    }
+  },
+  "mechanical": {
+    "length_mm": 5.2,
+    "width_mm": 5.2,
+    "height_mm": 2.5,
+    "assembly_side": "top",
+    "board_edge_clearance_mm": 2.54,
+    "mating_direction": "top",
+    "cable_exit_direction": "none"
+  },
+  "models": [],
+  "verification": {
+    "datasheet_reviewed": false,
+    "symbol_pinmap_verified": true,
+    "footprint_verified": true,
+    "mechanical_envelope_verified": false,
+    "step_model_required": true,
+    "step_model_verified": false,
+    "reviewed_by": "",
+    "reviewed_at": null,
+    "notes": "Poziome grupy 1+3 / 2+4 są zweryfikowane elektrycznie; brakuje dokładnego MPN, datasheetu i modelu STEP."
+  }
+}

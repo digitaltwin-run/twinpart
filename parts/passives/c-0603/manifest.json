@@ -1,0 +1,62 @@
+{
+  "schema_id": "wellmanifest.pcb/component-manifest/v1",
+  "component_id": "c-0603",
+  "version": "1.0.0",
+  "status": "provisional",
+  "kind": "passive",
+  "source": {
+    "source_id": "panel9-local",
+    "path": "artifacts/pcb/local.pretty/C_0603.kicad_mod"
+  },
+  "electrical": {
+    "symbol": "local:C",
+    "pin_map": [
+      {
+        "symbol_pin": "1",
+        "type": "passive",
+        "pads": [
+          "1"
+        ]
+      },
+      {
+        "symbol_pin": "2",
+        "type": "passive",
+        "pads": [
+          "2"
+        ]
+      }
+    ]
+  },
+  "eda": {
+    "footprint": "local:C_0603",
+    "footprint_revision": 1,
+    "pin_map_hash": "sha256:bd5e9ca1f4d0c006fbab7044a6ba2470f8bf256f175f6597f7642f13abaed5f9",
+    "assets": {
+      "footprint": {
+        "path": "local.pretty/C_0603.kicad_mod",
+        "sha256": "sha256:0472ab70907dfe66ded7e47acb9268555f8c3d2cc8f833cfbd1ef40a4be48509"
+      }
+    }
+  },
+  "mechanical": {
+    "length_mm": 1.6,
+    "width_mm": 0.8,
+    "height_mm": 0.8,
+    "assembly_side": "either",
+    "board_edge_clearance_mm": 2.54,
+    "mating_direction": "none",
+    "cable_exit_direction": "none"
+  },
+  "models": [],
+  "verification": {
+    "datasheet_reviewed": false,
+    "symbol_pinmap_verified": true,
+    "footprint_verified": true,
+    "mechanical_envelope_verified": false,
+    "step_model_required": false,
+    "step_model_verified": false,
+    "reviewed_by": "",
+    "reviewed_at": null,
+    "notes": "Brak konkretnego MPN; poprawna geometria lokalna nie wystarcza do statusu qualified."
+  }
+}
