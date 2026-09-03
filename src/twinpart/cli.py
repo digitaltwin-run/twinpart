@@ -95,6 +95,39 @@ def cmd_check(args: argparse.Namespace) -> int:
     return 0
 
 
+
+
+def cmd_swap(args: argparse.Namespace) -> int:
+    from .swap import ripup_and_swap_component
+    pcb_path = Path(args.pcb_file).resolve()
+    if not pcb_path.is_file():
+        print(f"Błąd: Plik PCB {pcb_path} nie istnieje", file=sys.stderr)
+        return 1
+
+    board_text = pcb_path.read_text(encoding="utf-8")
+    try:
+        new_board, res = ripup_and_swap_component(
+            board_text,
+            reference=args.reference,
+            new_part_id=args.to_part,
+            margin_mm=args.margin,
+        )
+        out_path = Path(args.output).resolve() if args.output else pcb_path
+        out_path.write_text(new_board, encoding="utf-8")
+
+        print(f"Pomyślnie wymieniono komponent {res.reference} na PCB:")
+        print(f"  • Poprzedni footprint: {res.old_footprint}")
+        print(f"  • Nowy footprint:      {res.new_footprint}")
+        print(f"  • Zerwanych segmentów: {res.ripped_segments}")
+        print(f"  • Zerwanych przelotek: {res.ripped_vias}")
+        print(f"  • Sieci do trasowania: {', '.join(res.unconnected_nets)}")
+        print(f"  • Zapisano do pliku:   {out_path}")
+        return 0
+    except Exception as exc:
+        print(f"Błąd wymiany komponentu: {exc}", file=sys.stderr)
+        return 1
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="twinpart", description="Central hardware parts library for digitaltwin-run")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -117,6 +150,15 @@ def main(argv: list[str] | None = None) -> int:
 
     p_check = sub.add_parser("check", help="Sprawdź integralność biblioteki części")
     p_check.set_defaults(func=cmd_check)
+
+    # swap
+    p_swap = sub.add_parser("swap", help="Bezpieczna wymiana komponentu na PCB z automatycznym zerwaniem kolidujących tras")
+    p_swap.add_argument("pcb_file", help="Ścieżka do pliku .kicad_pcb")
+    p_swap.add_argument("--reference", required=True, help="Oznaczenie komponentu (np. J1, U1)")
+    p_swap.add_argument("--to-part", required=True, help="Identyfikator części w twinpart (np. rj45-molex-85513-5013)")
+    p_swap.add_argument("--margin", type=float, default=4.0, help="Margines strefy zerwania tras w mm (domyślnie 4.0)")
+    p_swap.add_argument("--output", help="Plik wyjściowy (domyślnie nadpisuje źródłowy)")
+    p_swap.set_defaults(func=cmd_swap)
 
     args = parser.parse_args(argv)
     return args.func(args)
