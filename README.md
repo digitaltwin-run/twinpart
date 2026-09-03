@@ -35,6 +35,9 @@ twinpart check
 
 # Instalacja komponentu do projektu docelowego
 twinpart install rj45-molex-85513-5013 --target /sciezka/do/projektu/artifacts/pcb
+
+# Bezpieczna wymiana komponentu na PCB (automatyczny rip-up starych kolidujacych sciezek)
+twinpart swap /sciezka/do/panel9.kicad_pcb --reference J1 --to-part rj45-molex-85513-5013 --margin 4.0
 ```
 
 ---
