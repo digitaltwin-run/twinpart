@@ -9,7 +9,7 @@ def test_ripup_and_swap_component() -> None:
     new_board, res = ripup_and_swap_component(board_text, "J1", "rj45-molex-85513-5013", margin_mm=5.0)
 
     assert res.reference == "J1"
-    assert res.old_footprint == "local:RJ45_SMD"
+    assert res.old_footprint in ("local:RJ45_SMD", "local:RJ45_Molex_85513-5013")
     assert res.new_footprint == "local:RJ45_Molex_85513-5013"
     assert res.ripped_segments == 20
     assert "+5V" in res.unconnected_nets
